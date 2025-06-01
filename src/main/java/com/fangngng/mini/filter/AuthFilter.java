@@ -1,9 +1,8 @@
-package com.fangngng.mini;
+package com.fangngng.mini.filter;
 
 import com.sun.net.httpserver.HttpExchange;
 
 import java.net.http.HttpResponse;
-import java.util.List;
 
 public class AuthFilter implements MiniFilter{
     @Override

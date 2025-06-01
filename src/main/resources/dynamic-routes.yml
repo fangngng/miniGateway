@@ -1,0 +1,7 @@
+routes:
+  - id: auth-service
+    path: /auth/**
+    uri: http://localhost:8081
+    filters:
+      - AuthFilter
+      - LoggingFilter

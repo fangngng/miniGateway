@@ -1,4 +1,6 @@
-package com.fangngng.mini;
+package com.fangngng.mini.route;
+
+import com.fangngng.mini.filter.MiniFilter;
 
 import java.util.List;
 

@@ -1,8 +1,10 @@
 package com.fangngng.mini;
 
+import com.fangngng.mini.filter.MiniFilter;
+import com.fangngng.mini.route.MiniRoute;
+import com.fangngng.mini.route.MiniRouteLocator;
 import com.sun.net.httpserver.HttpExchange;
 
-import java.io.IOException;
 import java.io.OutputStream;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -27,7 +29,7 @@ public class MiniGatewayHandler {
             String path = httpExchange.getRequestURI().getPath();
 
             // 查找路由
-            Optional<MiniRoute> first = routeLocator.getRouters().stream().filter(route -> path.startsWith(route.getPath()))
+            Optional<MiniRoute> first = routeLocator.getRoutes().stream().filter(route -> path.startsWith(route.getPath()))
                     .findFirst();
 
             if (!first.isPresent()) {

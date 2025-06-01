@@ -1,14 +1,17 @@
-package com.fangngng.mini;
+package com.fangngng.mini.route;
+
+import com.fangngng.mini.filter.AuthFilter;
+import com.fangngng.mini.filter.MiniFilter;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class PropertiesRouteLocator implements MiniRouteLocator{
+public class PropertiesRouteLocator implements MiniRouteLocator {
 
     private List<MiniRoute> routeList;
 
     @Override
-    public List<MiniRoute> getRouters() {
+    public List<MiniRoute> getRoutes() {
         return this.routeList;
     }
 
